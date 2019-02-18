@@ -95,6 +95,7 @@
   cursor: pointer;
   transition: .3s ease-in-out;
   z-index: 500;
+  outline: none;
 }
 
 .hero-btn:hover {
