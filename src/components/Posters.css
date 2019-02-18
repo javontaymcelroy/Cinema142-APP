@@ -2,20 +2,20 @@
     width: 97%;
     margin: 0 auto;
     padding-bottom: 50px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-flow: row wrap;
     grid-row-gap: 50px;
     justify-items: center;
+    justify-content: space-between;
 }
 
-@media (max-width: 1440px) {
-    .movie-container{
-        grid-template-columns:1fr 1fr 1fr 1fr 1fr;
-    }
-}
 
 .poster-container {
     width: 269px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    margin-bottom: 3%;
 }
 
 .poster-container h1 {

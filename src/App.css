@@ -39,6 +39,7 @@
   z-index: 300;
   transition: .3s ease-in-out;
   cursor: pointer;
+  filter: brightness(85%);
 }
 
 .hero:hover {
@@ -81,16 +82,11 @@
   width: 250px;
   padding: 20px;
   border-radius: 50px;
-  border: none;
-  background: rgb(74,93,231);
-  background: -moz-linear-gradient(313deg, rgba(74,93,231,1) 0%, rgba(192,0,255,1) 100%);
-  background: -webkit-linear-gradient(313deg, rgba(74,93,231,1) 0%, rgba(192,0,255,1) 100%);
-  background: linear-gradient(313deg, rgba(74,93,231,1) 0%, rgba(192,0,255,1) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4a5de7",endColorstr="#c000ff",GradientType=1);
+  background: none;
+  border: 5px solid rgb(86, 34, 184);
   color: white;
-  font-size: 1rem;
-  font-weight: 700;
-  letter-spacing: 2px;
+  font-size: 1.2rem;
+  letter-spacing: 4px;
   text-transform: lowercase;
   cursor: pointer;
   transition: .3s ease-in-out;
@@ -99,8 +95,15 @@
 }
 
 .hero-btn:hover {
+  background-color: rgb(86, 34, 184);
   transition: .3s ease-in-out;
   filter: brightness(120%);
+}
+
+.hero-btn i {
+  color: white;
+  font-size: .8rem;
+  padding-right: 10px;
 }
 
 .browse {
@@ -119,7 +122,7 @@
 .trending-title {
   display: flex;
   align-items: center;
-  width: 25%;
+  width: 50%;
 }
 
 .trending-bar {
@@ -156,7 +159,9 @@
   opacity: .2;
 }
 
+
 .sub-hero {
+  visibility: hidden;
   position: absolute;
   object-fit: cover;
   width: 870px;
@@ -174,14 +179,7 @@
   transform: scale(1.01);
 }
 
-.page-buttons {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  top: 268vh;
-  left: 175vh;
-  width: 200px;
-}
+
 
 .page-btn {
   width: 150px;
@@ -190,6 +188,7 @@
   border-radius: 50px;
   background-color: rgb(86, 34, 184);
   color: white;
+  letter-spacing: 3px;
   margin-right: 20px;
   margin-bottom: 100px;
   cursor: pointer;
@@ -200,6 +199,13 @@
 .page-btn:hover{
   transition: .3s ease-in-out;
   filter: brightness(120%);
+}
+
+.page-btn:disabled,
+.page-btn[disabled]{
+  background: none;
+  border: 1px solid rgb(86, 34, 184);
+  color: rgb(86, 34, 184);
 }
 
 @media (max-width: 1440px) {

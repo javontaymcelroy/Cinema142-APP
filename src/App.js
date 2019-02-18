@@ -20,6 +20,10 @@ class App extends React.Component {
     };
   }
 
+  componentDidMount() {
+    this.getMovies(`https://api.themoviedb.org/3/movie/popular?api_key=6d9a91a4158b0a021d546ccd83d3f52e&language=en-US&page=${this.state.pageNumber}`);
+  }
+
   pageChange = event => {
     if (event.target.name === 'next') {
       let pageNumber = this.state.pageNumber+1;
@@ -71,10 +75,6 @@ class App extends React.Component {
     this.getMovies(query)
   }
 
-  componentDidMount() {
-    this.getMovies(`https://api.themoviedb.org/3/movie/popular?api_key=6d9a91a4158b0a021d546ccd83d3f52e&language=en-US&page=${this.state.pageNumber}`);
-  }
-
   getMovies = URL => {
 
 
@@ -98,7 +98,7 @@ class App extends React.Component {
         <div className="hero-info">
           <h1 className="hero-title">{movies[0].title}</h1>
           <p className="hero-overview">{movies[0].overview}</p>
-          <button className="hero-btn" onClick={()=> this.movieClicked(movies[0].id)}>Watch trailer</button>
+          <button className="hero-btn" onClick={()=> this.movieClicked(movies[0].id)}><i className="icon ion-md-play"></i>Watch trailer</button>
         </div>
 
         <img className="hero" src={src} alt="poster" onClick={()=> this.movieClicked(movies[0].id)}/>
@@ -119,8 +119,6 @@ class App extends React.Component {
             <button name="next" className="page-btn" onClick={this.pageChange}>Next Page</button>
           </div>
         </div>
-
-        <img className="sub-hero" src={`http://image.tmdb.org/t/p/original${movies[19].backdrop_path}`} alt="poster" onClick={()=> this.movieClicked(movies[19].id)}/>
         </div>
       );
     } else return('');
@@ -128,5 +126,3 @@ class App extends React.Component {
 }
 
 export default App;
-
-
