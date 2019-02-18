@@ -21,17 +21,17 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    this.getMovies(`https://api.themoviedb.org/3/movie/popular?api_key=6d9a91a4158b0a021d546ccd83d3f52e&language=en-US&page=${this.state.pageNumber}`);
+    this.getMovies(`https://api.themoviedb.org/3/trending/movie/day?api_key=6d9a91a4158b0a021d546ccd83d3f52e&language=en-US&page=${this.state.pageNumber}`);
   }
 
   pageChange = event => {
     if (event.target.name === 'next') {
       let pageNumber = this.state.pageNumber+1;
-      this.getMovies(`https://api.themoviedb.org/3/movie/popular?api_key=6d9a91a4158b0a021d546ccd83d3f52e&language=en-US&page=${pageNumber}`);
+      this.getMovies(`https://api.themoviedb.org/3/trending/movie/day?api_key=6d9a91a4158b0a021d546ccd83d3f52e&language=en-US&page=${pageNumber}`);
       this.setState ({ pageNumber: this.state.pageNumber+1 })
     } else {
       let pageNumber = this.state.pageNumber-1;
-      this.getMovies(`https://api.themoviedb.org/3/movie/popular?api_key=6d9a91a4158b0a021d546ccd83d3f52e&language=en-US&page=${pageNumber}`);
+      this.getMovies(`https://api.themoviedb.org/3/trending/movie/day?api_key=6d9a91a4158b0a021d546ccd83d3f52e&language=en-US&page=${pageNumber}`);
       this.setState ({ pageNumber: this.state.pageNumber-1 })
     }
   }
