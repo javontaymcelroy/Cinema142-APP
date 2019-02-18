@@ -10,7 +10,7 @@ function MovieResults (props) {
                 {movies.map(movies =>
                     <MovieData movieClicked = {props.movieClicked} key={movies.id} movies={movies} />
                 )
-            }}
+            }
         </div>
     );
 }

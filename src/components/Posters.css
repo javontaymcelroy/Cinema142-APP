@@ -32,6 +32,6 @@
 
 .posters-img:hover {
     transition: .2s ease-in-out;
-    transform: scale(1.02);
+    transform: scale(1.08);
     opacity: 1;
 }

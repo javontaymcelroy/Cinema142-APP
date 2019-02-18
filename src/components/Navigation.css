@@ -3,7 +3,7 @@
     z-index: 1000;
     position: absolute;
     position: fixed;
-    background-color: #000000b4;
+    background-color: #0000009a;
     -webkit-backdrop-filter: blur(50px);
     -moz-filter: blur(50px);
     -ms-filter: blur(50px);
@@ -13,6 +13,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 30px;
+    border-bottom: 1px solid rgb(14, 14, 14);
 
 }
 

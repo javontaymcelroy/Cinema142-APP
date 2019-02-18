@@ -12,7 +12,7 @@ html ::-webkit-scrollbar-thumb {
 body {
   margin: 0;
   padding: 0;
-  background-color: rgb(5, 5, 5);
+  background-color: rgb(10, 10, 10);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Roboto', sans-serif;
