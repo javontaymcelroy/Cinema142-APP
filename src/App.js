@@ -13,7 +13,7 @@ class App extends React.Component {
       modal: false,
       movieKey: '',
       search: '',
-      title: 'Most Popular',
+      title: 'Browse Movies',
       pageNumber: 1,
       movieId: '',
       trailerUrl: '',
@@ -63,7 +63,7 @@ class App extends React.Component {
 
     if (this.state.search === '') {
       query = 'https://api.themoviedb.org/3/movie/popular?api_key=6d9a91a4158b0a021d546ccd83d3f52e&language=en-US&page=1';
-      this.setState({ title: 'Most Popular', pageNumber: 1})
+      this.setState({ title: 'Browse Movies', pageNumber: 1})
     } else {
       this.setState ({ title: this.state.search });
     }
@@ -99,7 +99,7 @@ class App extends React.Component {
           <button className="hero-btn" onClick={()=> this.movieClicked(movies[0].id)}>Watch trailer</button>
         </div>
 
-        <img className="hero" src={src} alt="poster"/>
+        <img className="hero" src={src} alt="poster" onClick={()=> this.movieClicked(movies[0].id)}/>
         <div className="Top-Trending">
           <div className="trending-bar">
             <div className="trending-title">
@@ -108,9 +108,9 @@ class App extends React.Component {
             </div>
           </div>
           <MovieModal visable={this.state.modal} movieKey={this.state.movieKey} onClose={this.onClose} trailerUrl={this.state.trailerUrl} playMovie={this.playMovie} />
-          <button name="back" onClick={this.pageChange} disabled={this.state.pageNumber === 1}>Prev Page</button>
-          <button name="next" onClick={this.pageChange}>Next Page</button>
           <MovieResults movieClicked = {this.movieClicked} movies = {movies} />
+          <button name="back" className="page-btn" onClick={this.pageChange} disabled={this.state.pageNumber === 1}>Prev Page</button>
+          <button name="next" className="page-btn" onClick={this.pageChange}>Next Page</button>
         </div>
         <img className="hero-background" src={src} alt="poster"/>
         </div>

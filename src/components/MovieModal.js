@@ -30,10 +30,11 @@ class MovieModal extends Component {
     render() {
         if (this.props.visable) {
             return (
-                <div className="movie-modal" onClick={this.onOverlayClick}>
+                <div className="movie-modal">
                     <div className="video-frame">
-                        <iframe width="1424" height="815" title="movie trailer" src={this.props.trailerUrl} frameborder="0" allow="accelerometer;autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         <button className="playmovie-btn" onClick={this.props.playMovie}>Watch movie</button>
+                        <iframe width="1280" height="720" title="movie trailer" src={this.props.trailerUrl} frameborder="0" allow="accelerometer;autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <i class="icon ion-md-close" onClick={this.onOverlayClick}></i>
                     </div>
                     <span></span>
                 </div>
