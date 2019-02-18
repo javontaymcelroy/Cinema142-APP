@@ -155,3 +155,48 @@
   height: 100vh;
   opacity: .2;
 }
+
+.sub-hero {
+  position: absolute;
+  object-fit: cover;
+  width: 870px;
+  height: 40vh;
+  top: 259vh;
+  left: 71vh;
+  margin-bottom: 50px;
+  border-radius: 8px;
+  transition: .3s ease-in-out;
+  cursor: pointer;
+}
+
+.sub-hero:hover {
+  transition: .3s ease-in-out;
+  transform: scale(1.01);
+}
+
+.page-buttons {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  top: 268vh;
+  left: 175vh;
+}
+
+.page-btn {
+  width: 150px;
+  padding: 20px 0px;
+  border: none;
+  border-radius: 50px;
+  background-color: rgb(86, 34, 184);
+  color: white;
+  margin-right: 20px;
+  margin-bottom: 100px;
+  cursor: pointer;
+  outline: none;
+  transition: .3s ease-in-out;
+}
+
+.page-btn:hover{
+  transition: .3s ease-in-out;
+  filter: brightness(120%);
+}

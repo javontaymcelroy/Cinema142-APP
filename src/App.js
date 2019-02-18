@@ -109,10 +109,13 @@ class App extends React.Component {
           </div>
           <MovieModal visable={this.state.modal} movieKey={this.state.movieKey} onClose={this.onClose} trailerUrl={this.state.trailerUrl} playMovie={this.playMovie} />
           <MovieResults movieClicked = {this.movieClicked} movies = {movies} />
-          <button name="back" className="page-btn" onClick={this.pageChange} disabled={this.state.pageNumber === 1}>Prev Page</button>
-          <button name="next" className="page-btn" onClick={this.pageChange}>Next Page</button>
+          <div className="page-buttons">
+            <button name="back" className="page-btn" onClick={this.pageChange} disabled={this.state.pageNumber === 1}>Prev Page</button>
+            <button name="next" className="page-btn" onClick={this.pageChange}>Next Page</button>
+          </div>
         </div>
         <img className="hero-background" src={src} alt="poster"/>
+        <img className="sub-hero" src={`http://image.tmdb.org/t/p/original${movies[19].backdrop_path}`} alt="poster" onClick={()=> this.movieClicked(movies[19].id)}/>
         </div>
       );
     } else return('');
@@ -120,3 +123,5 @@ class App extends React.Component {
 }
 
 export default App;
+
+
