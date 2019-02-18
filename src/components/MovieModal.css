@@ -1,11 +1,18 @@
 .video-frame {
-    position: absolute;
+    position: relative;
     position: fixed;
-    top: 0;
-    left: 0;
-    margin-top: 3.5%;
+    top: 3%;
+    left: 10%;
+    margin-top: 1.5%;
     width: 99.9%;
     z-index: 10001;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movie-modal {
+    position: relative;
 }
 
 .movie-modal span {
@@ -22,4 +29,10 @@
     -ms-filter: blur(20px);
     -o-filter: blur(20px);
     backdrop-filter: blur(20px);
+}
+
+.playmovie-btn {
+    position: absolute;
+    width: 150px;
+    z-index: 1001;
 }

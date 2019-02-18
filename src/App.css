@@ -110,7 +110,6 @@
 }
 
 .trending-title {
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -130,6 +129,7 @@
 
 .trending-bar h1 {
   font-size: 3rem;
+  text-transform: capitalize;
   color: rgb(86, 34, 184);
 }
 

@@ -21,8 +21,12 @@
     height: 40px;
 }
 
-.search {
+form {
     width: 20%;
+}
+
+.search {
+    width: 100%;
     background: rgba(29, 29, 29, 0.226);
     border: none;
     border-radius: 10px;

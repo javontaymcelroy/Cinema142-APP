@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import './MovieModal.css';
 
+
 class MovieModal extends Component {
-    static defaultProps = {};
-    static propTypes = {};
-    state = {};
 
     listenKeyboard(event) {
         if (event.key === 'Escape' || event.keyCode === 27) {
@@ -28,12 +26,14 @@ class MovieModal extends Component {
         this.props.onClose();
       }
 
+
     render() {
         if (this.props.visable) {
             return (
                 <div className="movie-modal" onClick={this.onOverlayClick}>
                     <div className="video-frame">
-                        <iframe width="1424" height="815" src={`https://www.youtube-nocookie.com/embed/${this.props.movieKey}`} frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe width="1424" height="815" title="movie trailer" src={this.props.trailerUrl} frameborder="0" allow="accelerometer;autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <button className="playmovie-btn" onClick={this.props.playMovie}>Watch movie</button>
                     </div>
                     <span></span>
                 </div>
