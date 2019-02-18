@@ -180,6 +180,7 @@
   flex-direction: column;
   top: 268vh;
   left: 175vh;
+  width: 200px;
 }
 
 .page-btn {
@@ -199,4 +200,20 @@
 .page-btn:hover{
   transition: .3s ease-in-out;
   filter: brightness(120%);
+}
+
+@media (max-width: 1440px) {
+  .sub-hero {
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 50vh;
+  }
+
+  .page-buttons {
+    position: relative;
+    top: 0;
+    left: 0;
+
+  }
 }

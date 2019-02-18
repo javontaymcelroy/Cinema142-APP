@@ -92,7 +92,9 @@ class App extends React.Component {
 
       return (
         <div className="App">
+
         <Navigation submitSearch={this.submitSearch} searchChangeHandler={this.searchChangeHandler} />
+
         <div className="hero-info">
           <h1 className="hero-title">{movies[0].title}</h1>
           <p className="hero-overview">{movies[0].overview}</p>
@@ -100,11 +102,14 @@ class App extends React.Component {
         </div>
 
         <img className="hero" src={src} alt="poster" onClick={()=> this.movieClicked(movies[0].id)}/>
+
+        <img className="hero-background" src={src} alt="poster"/>
+
         <div className="Top-Trending">
           <div className="trending-bar">
             <div className="trending-title">
               <h1>{this.state.title}</h1>
-              <i className="icon ion-md-flame"></i>
+              <i className="icon ion-md-film"></i>
             </div>
           </div>
           <MovieModal visable={this.state.modal} movieKey={this.state.movieKey} onClose={this.onClose} trailerUrl={this.state.trailerUrl} playMovie={this.playMovie} />
@@ -114,7 +119,7 @@ class App extends React.Component {
             <button name="next" className="page-btn" onClick={this.pageChange}>Next Page</button>
           </div>
         </div>
-        <img className="hero-background" src={src} alt="poster"/>
+
         <img className="sub-hero" src={`http://image.tmdb.org/t/p/original${movies[19].backdrop_path}`} alt="poster" onClick={()=> this.movieClicked(movies[19].id)}/>
         </div>
       );

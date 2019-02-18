@@ -60,8 +60,7 @@
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4a5de7",endColorstr="#c000ff",GradientType=1);
     color: white;
     font-size: 1rem;
-    font-weight: 700;
-    letter-spacing: 2px;
+    letter-spacing: 3px;
     text-transform: lowercase;
     cursor: pointer;
     transition: .3s ease-in-out;
