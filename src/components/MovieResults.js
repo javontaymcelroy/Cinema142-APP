@@ -8,7 +8,7 @@ function MovieResults (props) {
     return(
         <div className="movie-container">
                 {movies.map(movies =>
-                    <MovieData key={movies.title} movies={movies} />
+                    <MovieData movieClicked = {props.movieClicked} key={movies.title} movies={movies} />
                 )
             }}
         </div>

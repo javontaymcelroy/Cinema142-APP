@@ -1,14 +1,27 @@
 import React from 'react';
 import './App.css';
 import Navigation from './components/Navigation';
-import MovieResults from './components/MovieResults'
+import MovieResults from './components/MovieResults';
+import MovieModal from './components/MovieModal';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      movies: []
+      movies: [],
+    modal: false,
+    movieKey: '',
     };
+  }
+
+  onClose = () => {
+    this.setState ({modal: false})
+  }
+
+  movieClicked = movieId => {
+    fetch(`https://api.themoviedb.org/3/movie/${movieId}/videos?api_key=6d9a91a4158b0a021d546ccd83d3f52e`)
+      .then(res => res.json())
+      .then(data => this.setState({ modal: true , movieKey: data.results[0].key }));
   }
 
   searchChangeHandler = event => {
@@ -16,7 +29,7 @@ class App extends React.Component {
   };
 
   componentDidMount() {
-    this.getMovies('https://api.themoviedb.org/3/movie/popular?api_key=6d9a91a4158b0a021d546ccd83d3f52e&language=en-US&page=4');
+    this.getMovies('https://api.themoviedb.org/3/movie/popular?api_key=6d9a91a4158b0a021d546ccd83d3f52e&language=en-US&page=2');
   }
 
   getMovies = URL => {
@@ -25,6 +38,7 @@ class App extends React.Component {
       .then(res => res.json())
       .then(data => this.setState({ movies: data }))
   };
+
 
   render() {
     const movies = this.state.movies.results;
@@ -39,7 +53,7 @@ class App extends React.Component {
         <div className="hero-info">
           <h1 className="hero-title">{movies[0].title}</h1>
           <p className="hero-overview">{movies[0].overview}</p>
-          <button className="hero-btn">Watch trailer</button>
+          <button className="hero-btn" onClick={()=> this.movieClicked(movies[0].id)}>Watch trailer</button>
         </div>
 
         <img className="hero" src={src} alt="poster"/>
@@ -59,7 +73,8 @@ class App extends React.Component {
               <button>Documentary</button>
             </div>
           </div>
-          <MovieResults movies = {movies} />
+          <MovieModal visable={this.state.modal} movieKey={this.state.movieKey} onClose={this.onClose}/>
+          <MovieResults movieClicked = {this.movieClicked} movies = {movies} />
         </div>
         <div className="browse">
           <img src={`http://image.tmdb.org/t/p/original${movies[4].backdrop_path}`} alt="backdrop" />
