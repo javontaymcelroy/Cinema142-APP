@@ -4,18 +4,17 @@
     padding-bottom: 50px;
     display: flex;
     flex-flow: row wrap;
-    grid-row-gap: 50px;
     justify-items: center;
-    justify-content: space-between;
 }
 
 
 .poster-container {
-    width: 370px;
+    margin: 0 auto;
+    width: 338px;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
-    margin-bottom: 2%;
+    padding: 10px 10px;
 }
 
 .poster-container h1 {
