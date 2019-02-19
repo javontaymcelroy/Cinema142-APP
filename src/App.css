@@ -150,55 +150,6 @@
   opacity: .2;
 }
 
-.bottom-hero {
-  position: absolute;
-  object-fit: cover;
-  object-position: top;
-  width: 1204px;
-  height: 380px;
-  left: 18.5%;
-  top: 261vh;
-  border-radius: 8px;
-  transition: .3s ease-in-out;
-  cursor: pointer;
-  filter: brightness(80%);
-}
-
-.bottom-hero:hover {
-    transition: .3s ease-in-out;
-    transform: scale(1.01);
-}
-
-.bottom-hero-info {
-  position: absolute;
-  left: 20%;
-  top: 267vh;
-  z-index: 800;
-  width: 1150px;
-  height: 320px;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-}
-
-.bottom-hero-title {
-  color: white;
-  text-align: left;
-  font-size: 4rem;
-  margin-bottom: 0;
-  width: auto;
-  user-select: none;
-}
-
-.bottom-hero-overview {
-  margin-top: 0;
-  color: white;
-  text-align: left;
-  font-size: 1.2rem;
-  width: auto;
-  user-select: none;
-}
-
 .page-btn {
   width: 150px;
   padding: 20px 0px;

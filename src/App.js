@@ -106,12 +106,6 @@ class App extends React.Component {
 
         <img className="hero-background" src={src} alt="poster"/>
 
-        <div className="bottom-hero-info">
-          <h1 className="bottom-hero-title">{movies[19].title}</h1>
-          <p className="bottom-hero-overview">{movies[19].overview}</p>
-        </div>
-        <img className="bottom-hero" src={`http://image.tmdb.org/t/p/original${movies[19].backdrop_path}`} alt="movie-poster" />
-
         <div className="Top-Trending">
           <div className="trending-bar">
             <div className="trending-title">
