@@ -1,17 +1,20 @@
 import React from 'react';
-import  './Posters.css';
+import './Posters.css';
 
 const MovieData = props => {
-    return (
-        <div className="poster-container">
-            <div className="posters">
-                <img className="posters-img" src={`http://image.tmdb.org/t/p/w500${props.movies.poster_path}`} alt="posters" onClick={() => props.movieClicked (
-                    props.movies.id
-                )}/>
-            </div>
-        </div>
-    );
-}
+  return (
+    <div className='poster-container'>
+      <div className='posters'>
+        <img
+          className='posters-img'
+          src={`http://image.tmdb.org/t/p/w500${props.movies.poster_path}`}
+          alt='posters'
+          onClick={() => props.movieClicked(props.movies.id)}
+        />
+      </div>
+    </div>
+  );
+};
 
 export default MovieData;
 

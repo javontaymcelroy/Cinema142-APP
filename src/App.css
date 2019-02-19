@@ -2,32 +2,26 @@
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-
 .hero-info {
   position: absolute;
-  margin: 25%  5%;
+  margin: 25% 5%;
   display: flex;
   flex-direction: column;
 }
 
-.hero{
+@media (max-width: 1440px) {
+  .hero-info {
+    margin: 25% 2%;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero-info {
+    margin: 38% 8%;
+  }
+}
+
+.hero {
   position: relative;
   margin-top: 115px;
   object-fit: cover;
@@ -36,18 +30,52 @@
   height: 750px;
   border-radius: 8px;
   z-index: 300;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
   cursor: pointer;
   filter: brightness(85%);
   box-shadow: 30px 50px 50px rgba(0, 0, 0, 0.534);
 }
 
+@media (max-width: 1440px) {
+  .hero {
+    margin-top: 100px;
+    height: 650px;
+    width: 86%;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero {
+    margin-top: 120px;
+    height: 480px;
+    width: 86%;
+  }
+}
+
 .hero:hover {
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
   transform: scale(1.01);
 }
 
+.hero-data {
+  font-size: 1rem;
+  text-align: left;
+  color: white;
+  z-index: 800;
+  width: 340px;
+  letter-spacing: 2px;
+}
+
+.release-date {
+  text-align: left;
+  color: white;
+  z-index: 800;
+  margin-top: 0;
+  text-transform: uppercase;
+}
+
 .hero-title {
+  margin-top: 0;
   color: white;
   font-size: 5rem;
   text-align: left;
@@ -56,6 +84,11 @@
   user-select: none;
 }
 
+@media (max-width: 800px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+}
 
 .hero-overview {
   width: 75%;
@@ -67,6 +100,11 @@
   user-select: none;
 }
 
+@media (max-width: 800px) {
+  .hero-overview {
+    font-size: 1rem;
+  }
+}
 
 .hero-btn {
   width: 250px;
@@ -79,20 +117,37 @@
   letter-spacing: 4px;
   text-transform: lowercase;
   cursor: pointer;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
   z-index: 500;
   outline: none;
 }
 
+@media (max-width: 1440px) {
+  .hero-btn {
+    font-size: 1rem;
+    padding: 20px;
+    width: 250px;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero-btn {
+    font-size: 0.8rem;
+    padding: 10px;
+    width: 200px;
+    background-color: rgb(86, 34, 184);
+  }
+}
+
 .hero-btn:hover {
   background-color: rgb(86, 34, 184);
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
   filter: brightness(120%);
 }
 
 .hero-btn i {
   color: white;
-  font-size: .8rem;
+  font-size: 0.8rem;
   padding-right: 10px;
 }
 
@@ -102,7 +157,7 @@
   padding-bottom: 100px;
 }
 
-.browse img{
+.browse img {
   width: auto;
   height: 80vh;
   border-radius: 8px;
@@ -116,12 +171,18 @@
   user-select: none;
 }
 
+@media (max-width: 800px) {
+  .trending-title {
+    width: 80%;
+  }
+}
+
 .trending-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin-left: 5%;
-  margin-top: 5%;
+  margin-top: 97px;
   border-bottom: 2px solid rgba(87, 34, 184, 0.397);
   margin-bottom: 3%;
   width: 90%;
@@ -139,19 +200,30 @@
   margin-left: 10px;
 }
 
-
 .hero-background {
   position: absolute;
   object-fit: cover;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
-  opacity: .2;
+  height: 1090px;
+  opacity: 0.2;
+}
+
+@media (max-width: 1440px) {
+  .hero-background {
+    height: 975px;
+  }
+}
+
+@media (max-width: 800px) {
+  .hero-background {
+    height: 700px;
+  }
 }
 
 .page-btn {
-  width: 150px;
+  width: 250px;
   padding: 20px 0px;
   border: none;
   border-radius: 50px;
@@ -162,16 +234,16 @@
   margin-bottom: 100px;
   cursor: pointer;
   outline: none;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
-.page-btn:hover{
-  transition: .3s ease-in-out;
+.page-btn:hover {
+  transition: 0.3s ease-in-out;
   filter: brightness(120%);
 }
 
 .page-btn:disabled,
-.page-btn[disabled]{
+.page-btn[disabled] {
   background: none;
   border: 1px solid rgb(86, 34, 184);
   color: rgb(86, 34, 184);
@@ -189,6 +261,5 @@
     position: relative;
     top: 0;
     left: 0;
-
   }
 }
