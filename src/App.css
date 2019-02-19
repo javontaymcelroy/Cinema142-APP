@@ -30,16 +30,16 @@
 .hero{
   position: relative;
   margin-top: 115px;
-  object-fit: contain;
+  object-fit: cover;
   background-position: top;
-  width: auto;
-  height: 80vh;
+  width: 70%;
+  height: 750px;
   border-radius: 8px;
-  box-shadow: 30px 30px 50px rgba(0, 0, 0, 0.466);
   z-index: 300;
   transition: .3s ease-in-out;
   cursor: pointer;
   filter: brightness(85%);
+  box-shadow: 30px 50px 50px rgba(0, 0, 0, 0.534);
 }
 
 .hero:hover {
