@@ -52,6 +52,15 @@
   }
 }
 
+@media (max-width: 500px) {
+  .hero {
+    margin-top: 120px;
+    height: 300px;
+    width: 86%;
+    margin-bottom: 0px;
+  }
+}
+
 .hero:hover {
   transition: 0.3s ease-in-out;
   transform: scale(1.01);
@@ -90,6 +99,12 @@
   }
 }
 
+@media (max-width: 500px) {
+  .hero-title {
+    font-size: 1.2rem;
+  }
+}
+
 .hero-overview {
   width: 75%;
   font-size: 1.3rem;
@@ -103,6 +118,16 @@
 @media (max-width: 800px) {
   .hero-overview {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero-overview {
+    font-size: 0.8rem;
+  }
+
+  .release-date {
+    font-size: 0.8rem;
   }
 }
 
@@ -139,6 +164,17 @@
   }
 }
 
+@media (max-width: 500px) {
+  .hero-btn {
+    margin: 50px auto;
+    margin-right: 85px;
+    font-size: 0.6rem;
+    padding: 10px;
+    width: 200px;
+    background-color: rgb(86, 34, 184);
+  }
+}
+
 .hero-btn:hover {
   background-color: rgb(86, 34, 184);
   transition: 0.3s ease-in-out;
@@ -149,6 +185,12 @@
   color: white;
   font-size: 0.8rem;
   padding-right: 10px;
+}
+
+@media (max-width: 500px) {
+  .hero-btn i {
+    font-size: 0.6rem;
+  }
 }
 
 .browse {
@@ -188,16 +230,39 @@
   width: 90%;
 }
 
+@media (max-width: 500px) {
+  .trending-bar {
+    justify-content: left;
+  }
+}
+
 .trending-bar h1 {
   font-size: 3rem;
   text-transform: capitalize;
   color: rgb(86, 34, 184);
 }
 
+@media (max-width: 500px) {
+  .trending-bar h1 {
+    width: 80%;
+    font-size: 1rem;
+    text-align: left;
+  }
+}
+
 .icon {
   color: rgb(86, 34, 184);
   font-size: 3rem;
   margin-left: 10px;
+}
+
+@media (max-width: 500px) {
+  .icon {
+    width: 80%;
+    font-size: 1rem;
+    margin-left: 0;
+    text-align: left;
+  }
 }
 
 .hero-background {
@@ -235,6 +300,20 @@
   cursor: pointer;
   outline: none;
   transition: 0.3s ease-in-out;
+}
+
+@media (max-width: 500px) {
+  .page-btn {
+    padding: 10px 0px;
+    width: 180px;
+    margin-bottom: 10px;
+  }
+
+  .page-buttons {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
 }
 
 .page-btn:hover {

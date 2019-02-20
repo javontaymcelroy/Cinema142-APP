@@ -1,5 +1,8 @@
 import React from 'react';
 import './Posters.css';
+import MovieModal from './MovieModal';
+
+console.log(MovieModal);
 
 const MovieData = props => {
   return (
@@ -11,6 +14,7 @@ const MovieData = props => {
           alt='posters'
           onClick={() => props.movieClicked(props.movies.id)}
         />
+        <MovieModal movies={props.movies} key={props.movies.id} />
       </div>
     </div>
   );

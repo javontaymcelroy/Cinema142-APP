@@ -1,5 +1,6 @@
 import React from 'react';
 import MovieData from './MovieData';
+
 import './Posters.css';
 
 function MovieResults(props) {
@@ -8,11 +9,13 @@ function MovieResults(props) {
   return (
     <div className='movie-container'>
       {movies.map(movies => (
-        <MovieData
-          movieClicked={props.movieClicked}
-          key={movies.id}
-          movies={movies}
-        />
+        <>
+          <MovieData
+            movieClicked={props.movieClicked}
+            key={movies.id}
+            movies={movies}
+          />
+        </>
       ))}
     </div>
   );

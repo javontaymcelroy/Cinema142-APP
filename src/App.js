@@ -16,7 +16,8 @@ class App extends React.Component {
       title: 'Browse Movies',
       pageNumber: 1,
       movieId: '',
-      trailerUrl: ''
+      trailerUrl: '',
+      name: ''
     };
   }
 
@@ -151,6 +152,8 @@ class App extends React.Component {
               onClose={this.onClose}
               trailerUrl={this.state.trailerUrl}
               playMovie={this.playMovie}
+              movieClicked={this.movieClicked}
+              movies={movies}
             />
             <MovieResults movieClicked={this.movieClicked} movies={movies} />
             <div className='page-buttons'>
