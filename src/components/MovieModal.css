@@ -13,13 +13,13 @@
 
 @media (max-width: 1440px) {
   .video-frame {
-    margin-top: 2%;
+    margin-top: 1%;
   }
 }
 
 iframe {
   width: 80%;
-  height: 800px;
+  height: 750px;
 }
 
 @media (max-width: 1440px) {
@@ -83,14 +83,14 @@ iframe {
 }
 
 .playmovie-btn {
-  margin-top: 40px;
+  margin-top: 20px;
   width: 250px;
-  padding: 15px;
+  padding: 10px;
   border-radius: 50px;
   background: none;
-  border: 5px solid rgb(86, 34, 184);
+  border: 2px solid rgb(86, 34, 184);
   color: white;
-  font-size: 1rem;
+  font-size: 0.9rem;
   letter-spacing: 4px;
   text-transform: lowercase;
   cursor: pointer;
