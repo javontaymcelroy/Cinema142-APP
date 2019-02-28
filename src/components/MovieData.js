@@ -2,8 +2,7 @@ import React from 'react';
 import './Posters.css';
 import MovieModal from './MovieModal';
 import Tilt from 'react-tilt';
-
-console.log(MovieModal);
+import { Link } from 'react-router-dom';
 
 const MovieData = props => {
   return (
@@ -11,15 +10,18 @@ const MovieData = props => {
       <div className='posters'>
         <Tilt
           className='Tilt'
-          options={{ max: 15, scale: 1, glare: true, maxGlare: 1 }}
+          options={{ max: 13, scale: 1.02, perspective: 1000 }}
         >
           <div className='Tilt-inner'>
-            <img
-              className='posters-img'
-              src={`http://image.tmdb.org/t/p/w500${props.movies.poster_path}`}
-              alt='posters'
-              onClick={() => props.movieClicked(props.movies.id)}
-            />
+            <Link to={`/movie/${props.movies.id}`}>
+              <img
+                className='posters-img'
+                src={`http://image.tmdb.org/t/p/w500${
+                  props.movies.poster_path
+                }`}
+                alt='posters'
+              />
+            </Link>
           </div>
         </Tilt>
         <MovieModal movies={props.movies} key={props.movies.id} />

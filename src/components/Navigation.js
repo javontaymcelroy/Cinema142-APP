@@ -4,7 +4,7 @@ import './Navigation.css';
 const Navigation = props => {
   return (
     <div className='navigation'>
-      <a href='index.html'>
+      <a href='/'>
         <img
           className='logo'
           src='https://i.ibb.co/jGNRvPV/logo.png'

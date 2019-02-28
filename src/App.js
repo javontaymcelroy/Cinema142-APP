@@ -1,15 +1,15 @@
 import React from 'react';
 import './App.css';
-import Navigation from './components/Navigation';
 import MovieResults from './components/MovieResults';
-import MovieModal from './components/MovieModal';
+// import MovieModal from './components/MovieModal';
 import Spider from './components/Spider';
+import MovieModal from './components/MovieModal';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      movies: [],
+      movies: props.movies,
       modal: false,
       movieKey: '',
       search: '',
@@ -21,26 +21,19 @@ class App extends React.Component {
     };
   }
 
-  componentDidMount() {
-    this.getMovies(
-      `https://api.themoviedb.org/3/trending/movie/day?api_key=6d9a91a4158b0a021d546ccd83d3f52e&language=en-US&page=${
-        this.state.pageNumber
-      }`
-    );
+  componentWillReceiveProps(nextProps) {
+    this.setState({
+      movies: nextProps.movies
+    });
   }
 
   pageChange = event => {
+    // debugger;
     if (event.target.name === 'next') {
-      let pageNumber = this.state.pageNumber + 1;
-      this.getMovies(
-        `https://api.themoviedb.org/3/trending/movie/day?api_key=6d9a91a4158b0a021d546ccd83d3f52e&language=en-US&page=${pageNumber}`
-      );
+      this.props.pageChange(this.state.pageNumber + 1);
       this.setState({ pageNumber: this.state.pageNumber + 1 });
     } else {
-      let pageNumber = this.state.pageNumber - 1;
-      this.getMovies(
-        `https://api.themoviedb.org/3/trending/movie/day?api_key=6d9a91a4158b0a021d546ccd83d3f52e&language=en-US&page=${pageNumber}`
-      );
+      this.props.pageChange(this.state.pageNumber - 1);
       this.setState({ pageNumber: this.state.pageNumber - 1 });
     }
   };
@@ -94,25 +87,15 @@ class App extends React.Component {
     this.getMovies(query);
   };
 
-  getMovies = URL => {
-    fetch(URL)
-      .then(res => res.json())
-      .then(data => this.setState({ movies: data }));
-  };
-
   render() {
-    const movies = this.state.movies.results;
+    window.scroll(0, 0);
+    const movies = this.state.movies;
     let src = '';
-    if (movies) {
+    if (movies && movies.length > 0) {
       src = 'http://image.tmdb.org/t/p/original' + movies[0].backdrop_path;
 
       return (
         <div className='App'>
-          <Navigation
-            submitSearch={this.submitSearch}
-            searchChangeHandler={this.searchChangeHandler}
-          />
-
           <div className='hero-info'>
             <h2 className='hero-data'>{movies[0].vote_average} / 10</h2>
             <h1 className='hero-title'>{movies[0].title}</h1>
@@ -146,6 +129,7 @@ class App extends React.Component {
                 <i className='icon ion-md-film' />
               </div>
             </div>
+
             <MovieModal
               visable={this.state.modal}
               movieKey={this.state.movieKey}

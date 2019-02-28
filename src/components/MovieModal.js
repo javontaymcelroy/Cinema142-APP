@@ -2,6 +2,12 @@ import React, { Component } from 'react';
 import './MovieModal.css';
 
 class MovieModal extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      modal: false
+    };
+  }
   listenKeyboard(event) {
     if (event.key === 'Escape' || event.keyCode === 27) {
       this.props.onClose();
@@ -26,6 +32,10 @@ class MovieModal extends Component {
 
   onOverlayClick = () => {
     this.props.onClose();
+  };
+
+  onClose = () => {
+    this.setState({ modal: false });
   };
 
   render() {

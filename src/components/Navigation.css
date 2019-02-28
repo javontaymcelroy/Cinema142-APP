@@ -1,7 +1,7 @@
 .navigation {
+  top: 0;
   width: 100%;
   z-index: 1000;
-  position: absolute;
   position: fixed;
   background-color: #0000009a;
   -webkit-backdrop-filter: blur(50px);
