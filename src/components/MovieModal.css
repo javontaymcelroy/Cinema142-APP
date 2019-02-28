@@ -18,8 +18,9 @@
 }
 
 iframe {
-  width: 80%;
-  height: 750px;
+  width: 100%;
+  height: 820px;
+  padding-bottom: 17px;
 }
 
 @media (max-width: 1440px) {
@@ -45,8 +46,9 @@ iframe {
 
 .video-frame .icon {
   transition: 0.3s ease-in-out;
-  margin-top: 10px;
+  margin-top: 0px;
   margin-left: 95%;
+  padding-bottom: 0px;
   cursor: pointer;
   font-size: 2rem;
 }
@@ -83,40 +85,6 @@ iframe {
   -ms-filter: blur(20px);
   -o-filter: blur(20px);
   backdrop-filter: blur(20px); */
-}
-
-.playmovie-btn {
-  margin-top: 20px;
-  width: 250px;
-  padding: 10px;
-  border-radius: 50px;
-  background: none;
-  border: 2px solid rgb(86, 34, 184);
-  color: white;
-  font-size: 0.9rem;
-  letter-spacing: 4px;
-  text-transform: lowercase;
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-  z-index: 500;
-  outline: none;
-}
-
-.playmovie-btn:hover {
-  background-color: rgb(86, 34, 184);
-  transition: 0.3s ease-in-out;
-  filter: brightness(120%);
-}
-
-@media (max-width: 500px) {
-  .playmovie-btn {
-    margin-top: 15px;
-    width: 150px;
-    font-size: 0.5rem;
-    border: 0;
-    background-color: rgb(86, 34, 184);
-    padding: 10px;
-  }
 }
 
 .close-btn {

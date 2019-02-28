@@ -52,7 +52,7 @@ class App extends React.Component {
           modal: true,
           movieKey: data.results[0].key,
           movieId: movieId,
-          trailerUrl: `https://www.youtube-nocookie.com/embed/${
+          trailerUrl: `https://www.youtube-nocookie.com/embed/autoplay=1/${
             data.results[0].key
           }`
         })

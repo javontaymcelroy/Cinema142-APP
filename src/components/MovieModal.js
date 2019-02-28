@@ -43,16 +43,17 @@ class MovieModal extends Component {
       return (
         <div className='movie-modal'>
           <div className='video-frame'>
-            <button className='playmovie-btn' onClick={this.props.playMovie}>
+            <button className='movie-page-btn' onClick={this.props.playMovie}>
               Watch movie
             </button>
             <iframe
-              width='1280'
-              height='720'
+              width='1920'
+              height='1080'
               title='movie trailer'
               src={this.props.trailerUrl}
               frameBorder='0'
-              allow='accelerometer;autoplay; encrypted-media; gyroscope; picture-in-picture'
+              allow='accelerometer; encrypted-media; gyroscope; picture-in-picture'
+              autoPlay='1'
               allowfullScreen='1'
             />
             <i class='icon ion-md-contract' onClick={this.onOverlayClick} />

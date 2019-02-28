@@ -5,7 +5,6 @@ import { Component } from 'react';
 import Spider from './Spider';
 import MovieModal from './MovieModal';
 import moment from 'moment';
-import MovieResults from './MovieResults';
 
 class MoviePage extends Component {
   constructor(props) {
@@ -99,10 +98,6 @@ class MoviePage extends Component {
                 >
                   <i className='icon ion-md-play' />
                   Watch trailer
-                </button>
-                <button className='movie-page-btn'>
-                  <i className='icon ion-md-play' onClick={this.playMovie} />
-                  Play Movie
                 </button>
               </div>
             </div>
