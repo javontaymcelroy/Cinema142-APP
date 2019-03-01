@@ -10,7 +10,7 @@ const MovieData = props => {
       <div className='posters'>
         <Tilt
           className='Tilt'
-          options={{ max: 13, scale: 1.02, perspective: 1000 }}
+          options={{ max: 13, scale: 1.05, perspective: 1000 }}
         >
           <div className='Tilt-inner'>
             <Link to={`/movie/${props.movies.id}`}>
