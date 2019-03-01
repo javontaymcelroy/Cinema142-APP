@@ -45,9 +45,7 @@ class Home extends Component {
         this.setState({
           movieKey: data.results[0].key,
           movieId: movieId,
-          trailerUrl: `https://www.youtube-nocookie.com/embed/${
-            data.results[0].key
-          }`
+          trailerUrl: `https://www.youtube.com/embed/${data.results[0].key}`
         })
       );
   };

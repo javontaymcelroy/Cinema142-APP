@@ -43,7 +43,7 @@ class MovieModal extends Component {
       return (
         <div className='movie-modal'>
           <div className='video-frame'>
-            <button className='movie-page-btn' onClick={this.props.playMovie}>
+            <button className='modal-page-btn' onClick={this.props.playMovie}>
               Watch movie
             </button>
             <iframe

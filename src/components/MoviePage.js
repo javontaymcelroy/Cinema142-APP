@@ -15,9 +15,25 @@ class MoviePage extends Component {
       movieId: '',
       trailerUrl: '',
       name: '',
-      modal: false
+      modal: false,
+      reviews: []
     };
   }
+
+  // componentDidMount() {
+  //   console.log(this.props.match.params.id);
+  //   this.getReviews(
+  //     `https://api.themoviedb.org/3/movie/${
+  //       this.props.match.params.id
+  //     }/reviews?page=1&language=en-US&api_key=6d9a91a4158b0a021d546ccd83d3f52e`
+  //   );
+  // }
+
+  // getReviews = URL => {
+  //   fetch(URL)
+  //     .then(res => res.json())
+  //     .then(data => this.setState({ reviews: data.results }));
+  // };
 
   movieClicked = movieId => {
     fetch(
@@ -29,9 +45,7 @@ class MoviePage extends Component {
           movieKey: data.results[0].key,
           movieId: movieId,
           modal: true,
-          trailerUrl: `https://www.youtube-nocookie.com/embed/${
-            data.results[0].key
-          }`
+          trailerUrl: `https://www.youtube.com/embed/${data.results[0].key}`
         })
       );
   };

@@ -111,7 +111,6 @@
 
 .overlay {
   position: absolute;
-  position: fixed;
   top: 0;
   left: 0;
   width: 99.9%;
@@ -119,7 +118,34 @@
   z-index: 700;
   background: linear-gradient(
     0deg,
-    rgba(12, 0, 19, 1) 0%,
+    rgba(31, 0, 48, 0.9220063025210083) 0%,
     rgba(255, 255, 255, 0) 78%
   );
+}
+
+.recommended-posters {
+  position: relative;
+  top: 1000px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.recommended-posters img {
+  width: auto;
+  height: 480px;
+  border-radius: 5px;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+@media (max-width: 800px) {
+  .poster {
+    display: none;
+  }
+
+  .movie-header-text {
+    width: 90%;
+    padding-left: 20px;
+  }
 }

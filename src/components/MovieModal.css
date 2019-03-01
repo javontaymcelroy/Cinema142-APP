@@ -90,3 +90,32 @@ iframe {
 .close-btn {
   color: white;
 }
+
+.modal-page-btn {
+  width: 250px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 50px;
+  background: none;
+  border: 3px solid rgb(86, 34, 184);
+  color: white;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  z-index: 500;
+  outline: none;
+}
+
+.modal-page-btn:hover {
+  background-color: rgb(86, 34, 184);
+  transition: 0.3s ease-in-out;
+  filter: brightness(120%);
+}
+
+@media (max-width: 800px) {
+  iframe {
+    padding-bottom: 0px;
+  }
+}
