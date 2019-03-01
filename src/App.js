@@ -4,6 +4,7 @@ import MovieResults from './components/MovieResults';
 // import MovieModal from './components/MovieModal';
 import Spider from './components/Spider';
 import MovieModal from './components/MovieModal';
+import moment from 'moment';
 
 class App extends React.Component {
   constructor(props) {
@@ -52,9 +53,7 @@ class App extends React.Component {
           modal: true,
           movieKey: data.results[0].key,
           movieId: movieId,
-          trailerUrl: `https://www.youtube.com/embed/autoplay=1/${
-            data.results[0].key
-          }`
+          trailerUrl: `https://www.youtube.com/embed/${data.results[0].key}`
         })
       );
   };
@@ -101,8 +100,7 @@ class App extends React.Component {
             <h1 className='hero-title'>{movies[0].title}</h1>
             <p className='hero-overview'>{movies[0].overview}</p>
             <p className='release-date'>
-              {' '}
-              Release Date: {movies[0].release_date}
+              {`${moment(movies[0].release_date, 'YYYY-MM-DD').format('LL')}`}
             </p>
             <button
               className='hero-btn'

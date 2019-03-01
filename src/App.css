@@ -134,14 +134,16 @@
 
 .hero-btn {
   width: 250px;
-  padding: 20px;
+  height: 50px;
+  padding: 10px;
   border-radius: 50px;
-  background: none;
-  border: 3px solid rgb(86, 34, 184);
+  margin-top: 20px;
+  border: 3px solid rgb(91, 45, 218);
+  background-color: rgb(86, 34, 184);
   color: white;
-  font-size: 1.2rem;
-  letter-spacing: 4px;
-  text-transform: lowercase;
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
   cursor: pointer;
   transition: 0.3s ease-in-out;
   z-index: 500;
@@ -150,15 +152,12 @@
 
 @media (max-width: 1440px) {
   .hero-btn {
-    font-size: 1rem;
-    padding: 20px;
     width: 250px;
   }
 }
 
 @media (max-width: 800px) {
   .hero-btn {
-    font-size: 0.8rem;
     padding: 10px;
     width: 200px;
     background-color: rgb(86, 34, 184);

@@ -12,7 +12,8 @@ class Home extends Component {
     pageNumber: 1,
     trailerUrl: '',
     movieKey: '',
-    movieId: ''
+    movieId: '',
+    modal: false
   };
 
   componentDidMount() {
@@ -43,6 +44,7 @@ class Home extends Component {
       .then(res => res.json())
       .then(data =>
         this.setState({
+          modal: true,
           movieKey: data.results[0].key,
           movieId: movieId,
           trailerUrl: `https://www.youtube.com/embed/${data.results[0].key}`
@@ -93,7 +95,11 @@ class Home extends Component {
             <App
               {...props}
               pageChange={this.pageChange}
+              trailerUrl={this.state.trailerUrl}
+              playMovie={this.playMovie}
+              movieKey={this.state.movieKey}
               movies={this.state.movies.results}
+              movieClicked={this.movieClicked}
             />
           )}
         />
