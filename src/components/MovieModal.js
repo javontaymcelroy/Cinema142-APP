@@ -47,6 +47,7 @@ class MovieModal extends Component {
               Watch movie
             </button>
             <iframe
+              sandbox='allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation'
               width='1920'
               height='1080'
               title='movie trailer'
