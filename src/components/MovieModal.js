@@ -46,6 +46,13 @@ class MovieModal extends Component {
             <button className='modal-page-btn' onClick={this.props.playMovie}>
               Watch movie
             </button>
+            <p className='warning'>
+              Warning: We recommend using the adBlocker{' '}
+              <a href='https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm?hl=en'>
+                uBlock
+              </a>{' '}
+              for Chrome to avoid intrusive ads and pop-ups.
+            </p>
             <iframe
               sandbox='allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation'
               width='1920'

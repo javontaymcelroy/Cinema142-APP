@@ -3,12 +3,7 @@
   width: 100%;
   z-index: 1000;
   position: fixed;
-  background-color: #000000d0;
-  -webkit-backdrop-filter: blur(50px);
-  -moz-filter: blur(50px);
-  -ms-filter: blur(50px);
-  -o-filter: blur(50px);
-  backdrop-filter: blur(50px);
+  background-color: #000000ef;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -17,7 +12,7 @@
 
 .logo {
   width: auto;
-  height: 40px;
+  height: 25px;
   transition: 0.3s ease-in-out;
 }
 

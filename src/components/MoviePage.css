@@ -21,6 +21,7 @@
   letter-spacing: 2px;
   color: white;
   text-transform: uppercase;
+  margin-bottom: 1%;
 }
 
 .movie-header-text p {
@@ -76,11 +77,11 @@
   width: 250px;
   height: 50px;
   padding: 10px;
-  border-radius: 50px;
+  border-radius: 5px;
   background: none;
   border: 3px solid rgb(86, 34, 184);
   color: white;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   letter-spacing: 2px;
   text-transform: uppercase;
   cursor: pointer;
