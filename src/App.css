@@ -272,7 +272,8 @@
   left: 0;
   width: 100%;
   height: 1090px;
-  opacity: 0.2;
+  opacity: 0.4;
+  filter: blur(30px);
 }
 
 @media (max-width: 1440px) {
