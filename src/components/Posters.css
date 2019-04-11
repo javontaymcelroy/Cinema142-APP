@@ -46,6 +46,7 @@
   transition: 0.2s ease-in-out;
   cursor: pointer;
   filter: brightness(100%);
+  border: 2px solid rgba(255, 255, 255, 0);
 }
 
 @media (max-width: 1440px) {
@@ -64,4 +65,5 @@
   transition: 0.2s ease-in-out;
   transform: scale(1.03);
   filter: brightness(110%);
+  border: 2px solid rgb(113, 51, 228);
 }

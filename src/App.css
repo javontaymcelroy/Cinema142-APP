@@ -28,12 +28,12 @@
   background-position: top;
   width: 70%;
   height: 750px;
-  border-radius: 8px;
+  border-radius: 10px;
   z-index: 300;
   transition: 0.3s ease-in-out;
   cursor: pointer;
   filter: brightness(85%);
-  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.534);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.212);
 }
 
 @media (max-width: 1440px) {
@@ -223,11 +223,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-left: 5%;
-  margin-top: 97px;
-  border-bottom: 2px solid rgba(87, 34, 184, 0.397);
+  margin-top: 5%;
+  border-bottom: 5px solid rgb(87, 34, 184);
   margin-bottom: 3%;
-  width: 90%;
+  width: 100%;
 }
 
 @media (max-width: 500px) {
@@ -237,9 +236,10 @@
 }
 
 .trending-bar h1 {
-  font-size: 3rem;
+  font-size: 2rem;
   text-transform: capitalize;
-  color: rgb(86, 34, 184);
+  margin-left: 6%;
+  color: rgb(113, 51, 228);
 }
 
 @media (max-width: 500px) {
