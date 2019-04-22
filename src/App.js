@@ -94,69 +94,71 @@ class App extends React.Component {
       src = 'http://image.tmdb.org/t/p/original' + movies[0].backdrop_path;
 
       return (
-        <div className='App'>
-          <div className='hero-info'>
-            <h2 className='hero-data'>{movies[0].vote_average} / 10</h2>
-            <h1 className='hero-title'>{movies[0].title}</h1>
-            <p className='hero-overview'>{movies[0].overview}</p>
-            <p className='release-date'>
-              {`${moment(movies[0].release_date, 'YYYY-MM-DD').format('LL')}`}
-            </p>
-            <button
-              className='hero-btn'
+        <>
+          <div className='App'>
+            <div className='hero-info'>
+              <h2 className='hero-data'>{movies[0].vote_average} / 10</h2>
+              <h1 className='hero-title'>{movies[0].title}</h1>
+              <p className='hero-overview'>{movies[0].overview}</p>
+              <p className='release-date'>
+                {`${moment(movies[0].release_date, 'YYYY-MM-DD').format('LL')}`}
+              </p>
+              <button
+                className='hero-btn'
+                onClick={() => this.movieClicked(movies[0].id)}
+              >
+                <i className='icon ion-md-play' />
+                Watch trailer
+              </button>
+            </div>
+
+            <img
+              className='hero'
+              src={src}
+              alt='poster'
               onClick={() => this.movieClicked(movies[0].id)}
-            >
-              <i className='icon ion-md-play' />
-              Watch trailer
-            </button>
-          </div>
+            />
 
-          <img
-            className='hero'
-            src={src}
-            alt='poster'
-            onClick={() => this.movieClicked(movies[0].id)}
-          />
+            <img className='hero-background' src={src} alt='poster' />
 
-          <img className='hero-background' src={src} alt='poster' />
+            <div className='Top-Trending'>
+              <div className='trending-bar'>
+                <div className='trending-title'>
+                  <h1>{this.state.title}</h1>
+                  <i className='icon ion-md-film' />
+                </div>
+              </div>
 
-          <div className='Top-Trending'>
-            <div className='trending-bar'>
-              <div className='trending-title'>
-                <h1>{this.state.title}</h1>
-                <i className='icon ion-md-film' />
+              <MovieModal
+                visable={this.state.modal}
+                movieKey={this.state.movieKey}
+                onClose={this.onClose}
+                trailerUrl={this.state.trailerUrl}
+                playMovie={this.playMovie}
+                movieClicked={this.movieClicked}
+                movies={movies}
+              />
+              <MovieResults movieClicked={this.movieClicked} movies={movies} />
+              <div className='page-buttons'>
+                <button
+                  name='back'
+                  className='page-btn'
+                  onClick={this.pageChange}
+                  disabled={this.state.pageNumber === 1}
+                >
+                  Prev Page
+                </button>
+                <button
+                  name='next'
+                  className='page-btn'
+                  onClick={this.pageChange}
+                >
+                  Next Page
+                </button>
               </div>
             </div>
-
-            <MovieModal
-              visable={this.state.modal}
-              movieKey={this.state.movieKey}
-              onClose={this.onClose}
-              trailerUrl={this.state.trailerUrl}
-              playMovie={this.playMovie}
-              movieClicked={this.movieClicked}
-              movies={movies}
-            />
-            <MovieResults movieClicked={this.movieClicked} movies={movies} />
-            <div className='page-buttons'>
-              <button
-                name='back'
-                className='page-btn'
-                onClick={this.pageChange}
-                disabled={this.state.pageNumber === 1}
-              >
-                Prev Page
-              </button>
-              <button
-                name='next'
-                className='page-btn'
-                onClick={this.pageChange}
-              >
-                Next Page
-              </button>
-            </div>
           </div>
-        </div>
+        </>
       );
     } else return '';
   }

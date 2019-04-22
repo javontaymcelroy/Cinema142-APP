@@ -1,10 +1,10 @@
 class Spider {
   constructor() {
-    this.key = '4VQ6XG7DQ6o6EhxC';
+    this.key = 'kSZoH21SOgg1GH07';
   }
 
   getMovieStream(id) {
-    return `https://videospider.in/getvideo?key=${
+    return `https://videospider.stream/personal?key=${
       this.key
     }&video_id=${id}&tmdb=1`;
   }
