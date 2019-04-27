@@ -1,6 +1,6 @@
 class Spider {
   constructor() {
-    this.key = 'kSZoH21SOgg1GH07';
+    this.key = 'AhWLPUIlhYfa18fg';
   }
 
   getMovieStream(id) {
