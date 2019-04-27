@@ -54,7 +54,7 @@ class MovieModal extends Component {
               for Chrome to avoid intrusive ads and pop-ups.
             </p>
             <iframe
-              sandbox='allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation'
+              // sandbox='allow-forms allow-pointer-lock allow-same-origin allow-scripts allow-top-navigation'
               width='1920'
               height='1080'
               title='movie trailer'
