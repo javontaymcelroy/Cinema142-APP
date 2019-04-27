@@ -10,3 +10,6 @@ class Spider {
   }
 }
 export default Spider;
+
+// First API Key: kSZoH21SOgg1GH07
+// Second API Key: AhWLPUIlhYfa18fg
